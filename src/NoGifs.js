@@ -1,9 +1,9 @@
 import React from 'react';
 
 const NoGifs = props => (
-  <li >
+  <div>
     <h3>Sorry, no GIFs match your search.</h3>
-  </li>
+  </div>
 );
 
 export default NoGifs;
