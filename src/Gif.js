@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Gif = props => (
-  <div>
-    <img src={props.url} alt={props.source}/>
-  </div>
+  <li >
+    <img src={props.url} alt=""/>
+  </li>
 );
 
 export default Gif;
