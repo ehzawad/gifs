@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const URL = "http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC"
+    const URL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC"
 
     axios
       .get(
@@ -35,7 +35,7 @@ class App extends Component {
   performSearch = query => {
     axios
       .get(
-        `http://api.giphy.com/v1/gifs/search?q=${query}&limit=24&api_key=dc6zaTOxFJmzC`
+        `https://api.giphy.com/v1/gifs/search?q=${query}&limit=24&api_key=dc6zaTOxFJmzC`
       )
       .then(response => {
         this.setState({
