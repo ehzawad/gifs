@@ -7,7 +7,7 @@ const GifList = props => {
   const results = props.data;
   let gifs;
   if (results.length) {
-    gifs = results.map(gif => <Gif url={gif.images.fixed_height.url} key={gif.id} />);
+    gifs = results.map(gif => <Gif url={gif.images.fixed_height.url} source={gif.source} key={gif.id} />);
   } else {
     gifs = <NoGifs />
   }
