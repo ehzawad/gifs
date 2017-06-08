@@ -19,6 +19,6 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "ultimate" "build && deploy"
+    "ultimate" : "yarn run build && yarn run deploy"
   }
 }
