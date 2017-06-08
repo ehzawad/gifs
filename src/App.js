@@ -15,14 +15,19 @@ class App extends Component {
 
   componentDidMount() {
     const URL = "http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC"
-    let f = fetch(URL)
-    f
-      .then(response => response.json())
-      .then(responseJson => {
-        this.setState({gifs: responseJson.data, loading: false})
+
+    axios
+      .get(
+        `${URL}`
+      )
+      .then(response => {
+        this.setState({
+          gifs: response.data.data,
+          loading: false
+        })
       })
       .catch(error => {
-        console.error(error)
+        console.log("Error fetching and parsing data", error)
       })
   }
 
